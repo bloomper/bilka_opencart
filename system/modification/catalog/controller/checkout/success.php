@@ -1,6 +1,10 @@
 <?php
 class ControllerCheckoutSuccess extends Controller {
 	public function index() {
+$this->load->model('module/gafenh');
+		$gafenh_purchase = $this->model_module_gafenh->purchase();
+$this->load->model('module/gafenh');
+		$gafenh_purchase = $this->model_module_gafenh->purchase();
 		$this->load->language('checkout/success');
 
 		if (isset($this->session->data['order_id'])) {
@@ -81,6 +85,8 @@ class ControllerCheckoutSuccess extends Controller {
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
+if(!empty($gafenh_purchase)) { $data['footer'] .= $gafenh_purchase; }
+if(!empty($gafenh_purchase)) { $data['footer'] .= $gafenh_purchase; }
 		$data['header'] = $this->load->controller('common/header');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success.tpl')) {

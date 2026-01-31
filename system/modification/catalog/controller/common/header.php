@@ -23,8 +23,20 @@ class ControllerCommonHeader extends Controller {
 
 		if ($this->config->get('config_google_analytics_status')) {
 			$data['google_analytics'] = html_entity_decode($this->config->get('config_google_analytics'), ENT_QUOTES, 'UTF-8');
+$this->load->model('module/gafenh');
+		$this->model_module_gafenh->loadjscss();
+		$data['google_analytics'] .= $this->model_module_gafenh->pageview();
+$this->load->model('module/gafenh');
+		$this->model_module_gafenh->loadjscss();
+		$data['google_analytics'] .= $this->model_module_gafenh->pageview();
 		} else {
 			$data['google_analytics'] = '';
+$this->load->model('module/gafenh');
+		$this->model_module_gafenh->loadjscss();
+		$data['google_analytics'] .= $this->model_module_gafenh->pageview();
+$this->load->model('module/gafenh');
+		$this->model_module_gafenh->loadjscss();
+		$data['google_analytics'] .= $this->model_module_gafenh->pageview();
 		}
 
 		$data['name'] = $this->config->get('config_name');
