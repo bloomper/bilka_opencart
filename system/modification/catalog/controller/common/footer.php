@@ -1,6 +1,7 @@
 <?php
 class ControllerCommonFooter extends Controller {
 	public function index() {
+$data['google_consent_v2'] = $this->load->controller('module/google_consent_v2');
  $data['custom_footer'] = $this->config->get('custom_footer'); 
 		$this->load->language('common/footer');
 

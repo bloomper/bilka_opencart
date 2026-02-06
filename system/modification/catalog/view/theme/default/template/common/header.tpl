@@ -7,6 +7,72 @@
 <!--<![endif]-->
 <head>
 
+        <script>
+            window.consent_mode_v2_action_route = 'module/google_consent_v2/add_action';
+            
+            function setDefaultConsent() {
+                console.log('Google Consent Mode V2: set defaults');
+            
+                let adStorage = 'denied';
+                let adUserData = 'denied';
+                let adPersonalization = 'denied';
+                let analyticsStorage = 'denied';
+                let functionalityStorage = 'denied';
+                let personalizationStorage = 'denied';
+                let securityStorage = 'denied';
+            
+                if (document.cookie.indexOf('ad_storage=granted') !== -1) {
+                    adStorage = 'granted';
+                }
+            
+                if (document.cookie.indexOf('ad_user_data=granted') !== -1) {
+                    adUserData = 'granted';
+                }
+            
+                if (document.cookie.indexOf('ad_personalization=granted') !== -1) {
+                    adPersonalization = 'granted';
+                }
+            
+                if (document.cookie.indexOf('analytics_storage=granted') !== -1) {
+                    analyticsStorage = 'granted';
+                }
+
+                if (document.cookie.indexOf('functionality_storage=granted') !== -1) {
+                    functionalityStorage = 'granted';
+                }
+
+                if (document.cookie.indexOf('personalization_storage=granted') !== -1) {
+                    personalizationStorage = 'granted';
+                }
+
+                if (document.cookie.indexOf('security_storage=granted') !== -1) {
+                    securityStorage = 'granted';
+                }
+            
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                    'ad_storage': adStorage,
+                    'ad_user_data': adUserData,
+                    'ad_personalization': adPersonalization,
+                    'analytics_storage': analyticsStorage,
+                    'functionality_storage': functionalityStorage,
+                    'personalization_storage': personalizationStorage,
+                    'security_storage': securityStorage
+                });
+
+                if (window.clarity) {
+                    window.clarity('consentv2', {
+                        'ad_storage':              adStorage,
+                        'analytics_storage':       analyticsStorage
+                    });
+                }
+            }
+            
+            setDefaultConsent();
+        </script>
+        
+
             <?php if(!empty($google_site_verification_code)){ ?>
 			<meta name="google-site-verification" content="<?=$google_site_verification_code?>" />
             <?php } ?>

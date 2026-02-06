@@ -112,6 +112,7 @@ footer hr{border-color:<?php echo isset($custom_footer['footer_hr_color']) ? $cu
 
 
 
+<?php echo $google_consent_v2; ?>
 
 <?php if( $maintenance ) { ?>
 <style type="text/css">
