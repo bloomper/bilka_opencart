@@ -1,4 +1,5 @@
 <?php
+#[\AllowDynamicProperties]
 class Weight {
 	private $weights = array();
 

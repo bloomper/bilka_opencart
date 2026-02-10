@@ -1,4 +1,5 @@
 <?php
+#[\AllowDynamicProperties]
 class Currency {
 	private $code;
 	private $currencies = array();

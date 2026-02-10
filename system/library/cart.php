@@ -1,4 +1,5 @@
 <?php
+#[\AllowDynamicProperties]
 class Cart {
 	private $config;
 	private $db;

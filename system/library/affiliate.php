@@ -1,4 +1,5 @@
 <?php
+#[\AllowDynamicProperties]
 class Affiliate {
 	private $affiliate_id;
 	private $firstname;

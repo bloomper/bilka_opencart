@@ -1,4 +1,5 @@
 <?php
+#[\AllowDynamicProperties]
 class Length {
 	private $lengths = array();
 

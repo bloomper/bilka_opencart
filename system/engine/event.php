@@ -1,4 +1,5 @@
 <?php
+#[\AllowDynamicProperties]
 class Event {
 	private $data = array();
 

@@ -1,4 +1,5 @@
 <?php
+#[\AllowDynamicProperties]
 final class Openbay {
 	private $registry;
 	private $installed_modules = array();
