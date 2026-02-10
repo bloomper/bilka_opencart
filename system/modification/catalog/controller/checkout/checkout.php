@@ -87,8 +87,6 @@ class ControllerCheckoutCheckout extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 $this->load->model('module/gafenh');
 		$data['footer'] .= $this->model_module_gafenh->beginchk();
-$this->load->model('module/gafenh');
-		$data['footer'] .= $this->model_module_gafenh->beginchk();
 		$data['header'] = $this->load->controller('common/header');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/checkout.tpl')) {

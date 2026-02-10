@@ -166,8 +166,6 @@ class ControllerAccountLogin extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 $this->load->model('module/gafenh');
 		$data['footer'] .= $this->model_module_gafenh->login();
-$this->load->model('module/gafenh');
-		$data['footer'] .= $this->model_module_gafenh->login();
 		$data['header'] = $this->load->controller('common/header');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/login.tpl')) {

@@ -26,14 +26,8 @@ class ControllerCommonHeader extends Controller {
 $this->load->model('module/gafenh');
 		$this->model_module_gafenh->loadjscss();
 		$data['google_analytics'] .= $this->model_module_gafenh->pageview();
-$this->load->model('module/gafenh');
-		$this->model_module_gafenh->loadjscss();
-		$data['google_analytics'] .= $this->model_module_gafenh->pageview();
 		} else {
 			$data['google_analytics'] = '';
-$this->load->model('module/gafenh');
-		$this->model_module_gafenh->loadjscss();
-		$data['google_analytics'] .= $this->model_module_gafenh->pageview();
 $this->load->model('module/gafenh');
 		$this->model_module_gafenh->loadjscss();
 		$data['google_analytics'] .= $this->model_module_gafenh->pageview();

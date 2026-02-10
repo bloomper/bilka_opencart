@@ -161,8 +161,6 @@ class ControllerInformationContact extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 $this->load->model('module/gafenh');
 		$data['footer'] .= $this->model_module_gafenh->contact();
-$this->load->model('module/gafenh');
-		$data['footer'] .= $this->model_module_gafenh->contact();
 		$data['header'] = $this->load->controller('common/header');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/contact.tpl')) {
@@ -202,8 +200,6 @@ $this->load->model('module/gafenh');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
-$this->load->model('module/gafenh');
-		$data['footer'] .= $this->model_module_gafenh->contact();
 $this->load->model('module/gafenh');
 		$data['footer'] .= $this->model_module_gafenh->contact();
 		$data['header'] = $this->load->controller('common/header');

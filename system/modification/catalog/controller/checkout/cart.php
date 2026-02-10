@@ -245,8 +245,6 @@ class ControllerCheckoutCart extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 $this->load->model('module/gafenh');
 		$data['footer'] .= $this->model_module_gafenh->viewcart();
-$this->load->model('module/gafenh');
-		$data['footer'] .= $this->model_module_gafenh->viewcart();
 			$data['header'] = $this->load->controller('common/header');
 
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/cart.tpl')) {
@@ -270,8 +268,6 @@ $this->load->model('module/gafenh');
 			$data['content_top'] = $this->load->controller('common/content_top');
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
-$this->load->model('module/gafenh');
-		$data['footer'] .= $this->model_module_gafenh->viewcart();
 $this->load->model('module/gafenh');
 		$data['footer'] .= $this->model_module_gafenh->viewcart();
 			$data['header'] = $this->load->controller('common/header');
@@ -421,8 +417,6 @@ $this->load->model('module/gafenh');
 	}
 
 	public function remove() {
-$this->load->model('module/gafenh');
-		$this->model_module_gafenh->remove_from_cart();
 $this->load->model('module/gafenh');
 		$this->model_module_gafenh->remove_from_cart();
 		$this->load->language('checkout/cart');

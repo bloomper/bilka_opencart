@@ -7,8 +7,6 @@ class ControllerAccountLogout extends Controller {
 			$this->customer->logout();
 $this->load->model('module/gafenh');
 		$this->model_module_gafenh->logoutbefore();
-$this->load->model('module/gafenh');
-		$this->model_module_gafenh->logoutbefore();
 			$this->cart->clear();
 
 			unset($this->session->data['wishlist']);
@@ -64,8 +62,6 @@ $this->load->model('module/gafenh');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
-$this->load->model('module/gafenh');
-		$data['footer'] .= $this->model_module_gafenh->logout();
 $this->load->model('module/gafenh');
 		$data['footer'] .= $this->model_module_gafenh->logout();
 		$data['header'] = $this->load->controller('common/header');
