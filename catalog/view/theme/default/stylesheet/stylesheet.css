@@ -597,6 +597,7 @@ h2.price {
 }
 .product-thumb .price-new {
 	font-weight: 600;
+	color: #E33;
 }
 .product-thumb .price-old {
 	color: #999;

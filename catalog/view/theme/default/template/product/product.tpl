@@ -153,7 +153,7 @@
             <?php } else { ?>
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
             <li>
-              <h2><?php echo $special; ?></h2>
+              <h2 style="color: #E33;"><?php echo $special; ?></h2>
             </li>
             <?php } ?>
             <?php if ($tax) { ?>
